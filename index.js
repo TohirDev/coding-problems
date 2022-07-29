@@ -54,30 +54,34 @@ let alphabet = [
 ];
 
 function CodelandUsernameValidation(str) {
-  let input = `${str}`.split("");
+  let input = str
   if(input.length >= 4 && input.length <= 25) {
     let lastEl = input[input.length -1]
     if(lastEl !== '_') {
-      if(!input.includes('!')){
+      if(!input.includes('!') && !input.includes('@')){
         console.log('ok')
         for (let i = 0; i < alphabet.length; i++) {
           if (input[0] === alphabet[i]) {
             console.log("starts with " + input[0]);
+          } else {
+            console.log('raqam bilan boshlanishi mumkin emas')
           }
         } 
       } else {
-        console.log('yoq')
+        console.log('Bu belgilar mumkin emas')
       }
       
     } else {
-      console.log('mumkinmas')
+      console.log('Oxiri _ bn tugashu mumkin emas')
     }
   } else {
-    console.log('not enough')
+    console.log('Yetarli harf yo\'q')
   }
  
   return input;
 }
 
 
-console.log(CodelandUsernameValidation("fa11w"));
+console.log(CodelandUsernameValidation("esdw"));
+
+
