@@ -82,6 +82,18 @@ function CodelandUsernameValidation(str) {
 }
 
 
-console.log(CodelandUsernameValidation("esdw"));
+// BOSHQA MASALA
 
+
+function str(txt) {
+  let a = txt.split("").reverse().join('')
+  console.log(a, txt)
+  if(a === txt){
+      console.log('yaxshi')
+  } else {
+      console.log('yomon')
+  }
+}
+
+str('kiyik')
 
